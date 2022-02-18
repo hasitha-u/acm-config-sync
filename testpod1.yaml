@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ServiceAccount
 metadata:
-  name: testpodserviceaccount
+  name: testpod1serviceaccount
   namespace: default
   annotations:
     iam.gke.io/gcp-service-account: gke-workload@gcp-gcs-pso.iam.gserviceaccount.com
@@ -9,14 +9,14 @@ metadata:
 apiVersion: v1
 kind: Pod
 metadata:
-  name: testpod
+  name: testpod1
   namespace: default
 spec:
-  serviceAccountName: testpodserviceaccount
+  serviceAccountName: testpod1serviceaccount
   containers:
   - image: gcr.io/google.com/cloudsdktool/cloud-sdk:slim
     imagePullPolicy: IfNotPresent
-    name: testpod
+    name: testpod1
     resources:
       requests:
         cpu: 100m

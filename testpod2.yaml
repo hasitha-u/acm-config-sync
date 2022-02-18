@@ -9,14 +9,14 @@ metadata:
 apiVersion: v1
 kind: Pod
 metadata:
-  name: testpod1
+  name: testpod2
   namespace: default
 spec:
   serviceAccountName: mypodserviceaccount
   containers:
   - image: gcr.io/google.com/cloudsdktool/cloud-sdk:slim
     imagePullPolicy: IfNotPresent
-    name: testpod1
+    name: testpod2
     resources:
       requests:
         cpu: 100m

@@ -18,7 +18,7 @@ spec:
       restartPolicy: Always
       containers:
       - name: twistlock-defender
-        image: registry.twistlock.com/twistlock/defender:defender_21_08_520
+        image: registry.twistlock.com/twistlock/defender:defender_21_08_525
         volumeMounts:
         - name: data-folder
           mountPath: "/var/lib/twistlock"
